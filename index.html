@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Kalkulator nilai responsi PBW2, Assessment 1 Kode D.">
+  <title>Nilai responsi PBW2</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="rubric.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Nilai responsi</h1>
+        <p>PBW2 · Assessment 1 · Tipe D</p>
+      </div>
+      <button id="reset" type="button">Reset</button>
+    </header>
+
+    <div class="student">
+      <label for="name">Nama mahasiswa
+        <input id="name" type="text" autocomplete="off">
+      </label>
+      <label for="nim">NIM
+        <input id="nim" type="text" inputmode="numeric" autocomplete="off">
+      </label>
+    </div>
+
+    <noscript>Aktifkan JavaScript untuk menggunakan kalkulator.</noscript>
+    <div id="rubric"></div>
+
+    <section class="result" aria-label="Hasil penilaian" aria-live="polite" aria-atomic="true">
+      <div>
+        <h2>Total nilai</h2>
+
+      </div>
+      <p class="score"><strong id="total">0</strong><span> / 100</span></p>
+    </section>
+    <button id="export" type="button">Unduh Markdown</button>
+    <footer>
+    </footer>
+  </main>
+</body>
+</html>

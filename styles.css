@@ -1,0 +1,67 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #252525;
+  background: #fff;
+  font-synthesis: none;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-bottom: 110px; }
+body { margin: 0; }
+main { max-width: 800px; margin: 0 auto; padding: 40px 24px 24px; }
+h1, h2, p { margin: 0; }
+h1 { font-size: 24px; font-weight: 650; letter-spacing: -0.5px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+header p, .help, footer, #status { color: #626262; font-size: 13px; }
+header p { margin-top: 4px; }
+button, input, select { font: inherit; }
+button, input, select { border: 1px solid #ccc; border-radius: 4px; background: #fff; color: inherit; }
+button { min-height: 44px; padding: 9px 14px; cursor: pointer; touch-action: manipulation; }
+#reset { flex-shrink: 0; }
+button:hover { background: #f3f3f3; }
+button:active { background: #e8e8e8; }
+:focus-visible { outline: 2px solid #333; outline-offset: 3px; }
+.student { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0 20px; }
+label { font-size: 13px; font-weight: 500; }
+input { display: block; width: 100%; min-width: 0; min-height: 44px; margin-top: 6px; padding: 9px 10px; font-size: 16px; }
+.help { margin-bottom: 24px; }
+.rubric-section { margin-bottom: 24px; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 10px; border-bottom: 1px solid #aaa; }
+.section-heading h2 { font-size: 15px; font-weight: 600; }
+.section-heading span { font-size: 13px; color: #626262; white-space: nowrap; }
+.item { display: grid; grid-template-columns: minmax(0, 1fr) 170px 64px; gap: 16px; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+.item label { font-size: 14px; font-weight: 400; }
+.item-code { display: inline-block; width: 30px; color: #777; font-size: 12px; }
+select { width: 100%; min-width: 0; min-height: 44px; padding: 7px 8px; font-size: 13px; cursor: pointer; }
+.item-score { text-align: right; font-size: 13px; color: #626262; white-space: nowrap; }
+.item-score b { color: #252525; font-weight: 500; }
+.result { position: sticky; bottom: 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; border-top: 2px solid #252525; background: #fff; }
+.result h2 { font-size: 15px; font-weight: 600; }
+#status { margin-top: 3px; }
+.score { white-space: nowrap; }
+.score strong { font-size: 32px; font-weight: 650; letter-spacing: -1px; }
+.score span { font-size: 16px; color: #777; }
+footer { padding-top: 12px; }
+footer p + p { margin-top: 5px; }
+
+@media (max-width: 540px) {
+  main {
+    padding: 24px max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+  header { gap: 12px; }
+  header > div { min-width: 0; }
+  h1 { font-size: 22px; }
+  .student { grid-template-columns: minmax(0, 1fr); gap: 16px; margin: 24px 0; }
+  .student label { font-size: 14px; }
+  .item { grid-template-columns: minmax(0, 1fr) auto; gap: 10px 12px; padding: 14px 0; scroll-margin-bottom: 110px; }
+  .item label { grid-column: 1; grid-row: 1; font-size: 15px; }
+  .item-score { grid-column: 2; grid-row: 1; font-size: 14px; }
+  .item select { grid-column: 1 / -1; grid-row: 2; }
+  .section-heading { gap: 12px; }
+  .section-heading h2 { font-size: 15px; }
+  select { min-height: 48px; font-size: 16px; padding: 10px 12px; }
+  .result { z-index: 1; padding: 12px 0 max(12px, env(safe-area-inset-bottom)); }
+  #export { width: 100%; min-height: 48px; margin-top: 12px; }
+}

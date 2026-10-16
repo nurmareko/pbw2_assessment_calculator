@@ -1,0 +1,11 @@
+# Assessment documents and exported student records must stay local.
+*.pdf
+responsi-*.md
+responsi-*.csv
+
+# Local tools and temporary previews.
+node_modules/
+.env
+.env.*
+*-check.png
+preview*.png
