@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Kalkulator nilai responsi PBW2, Assessment 1 Kode D.">
   <title>Nilai responsi PBW2</title>
-
   <link rel="stylesheet" href="styles.css">
-  <script defer src="vendor/wired-elements.js"></script>
   <script defer src="rubric.js"></script>
   <script defer src="app.js"></script>
 </head>
@@ -15,17 +13,17 @@
   <main>
     <header>
       <div>
-        <p class="eyebrow">PBW2 · Assessment 1 · Tipe D</p>
-        <h1><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m7 4 20 1-1 25-20-1Z M12 11h10M12 17h9M12 23h5"/></svg>Nilai responsi</h1>
+        <h1>Nilai responsi</h1>
+        <p>PBW2 · Assessment 1 · Tipe D</p>
       </div>
-      <button id="reset" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></svg>Reset</button>
+      <button id="reset" type="button">Reset</button>
     </header>
 
     <div class="student">
-      <label for="name" id="name-label">Nama mahasiswa
+      <label for="name">Nama mahasiswa
         <input id="name" type="text" autocomplete="off">
       </label>
-      <label for="nim" id="nim-label">NIM
+      <label for="nim">NIM
         <input id="nim" type="text" inputmode="numeric" autocomplete="off">
       </label>
     </div>
@@ -33,14 +31,16 @@
     <noscript>Aktifkan JavaScript untuk menggunakan kalkulator.</noscript>
     <div id="rubric"></div>
 
-    <section class="result" aria-label="Hasil penilaian">
-      <div class="total" aria-live="polite" aria-atomic="true">
+    <section class="result" aria-label="Hasil penilaian" aria-live="polite" aria-atomic="true">
+      <div>
         <h2>Total nilai</h2>
-        <p class="score"><strong id="total">0</strong><span> / 100</span></p>
+
       </div>
-      <button id="export" class="primary" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3-.3 12M7 10l5 5 5-5M4 17v4h16v-4"/></svg>Unduh Markdown</button>
+      <p class="score"><strong id="total">0</strong><span> / 100</span></p>
     </section>
-    <p id="save-status" class="storage-warning" role="status" hidden></p>
+    <button id="export" type="button">Unduh Markdown</button>
+    <footer>
+    </footer>
   </main>
 </body>
 </html>
